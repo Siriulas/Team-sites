@@ -1,0 +1,147 @@
+body {
+  font-family: "Protest Revolution", sans-serif;
+  background-color: rgb(82, 82, 82);
+  margin: 0;
+  position: relative;
+  height: 3000px;
+}
+header {
+  background-color: black;
+  padding: 10px 72px;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.logo {
+  width: 180px;
+}
+.nav {
+  position: relative;
+  align-items: center;
+  display: flex;
+}
+.logo a {
+  font-size: 16px;
+  display: flex;
+  color: #ffffff;
+  align-items: center;
+  padding: 0 10px;
+  height: 80px;
+}
+.logo-img {
+  height: 50px;
+  width: 50px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.nav-list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  justify-content: end;
+  list-style-type: none;
+}
+.nav-list-link {
+  position: relative;
+}
+.nav-list-link::after {
+  background: rgb(1, 88, 62);
+  bottom: -8px;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transition: all 0.25s ease;
+  width: 100%;
+}
+.nav-list-link:hover::after {
+  transform: scaleX(1);
+}
+.nav-list li {
+  display: inline-block;
+  font-weight: 700;
+  color: white;
+  padding: 0 14px;
+  font-size: 16px;
+}
+.nav-list li:last-child a {
+  background-color: red;
+  display: block;
+  border-radius: 3px;
+  line-height: 24px;
+  padding: 4px 20px;
+}
+.nav-list li:last-child a:hover {
+  background-color: rgb(207, 11, 11);
+  transition: all 0.25s ease;
+  color: white;
+}
+.nav-list li a:hover {
+  color: rgb(255, 238, 207);
+  transition: all 0.25s ease-in;
+}
+.nav-toggle {
+  font-size: 2rem;
+  color: white;
+  display: none;
+}
+.burger-icon {
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  vertical-align: -0.125em;
+  cursor: pointer;
+}
+.head-page-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px;
+}
+.head-page-box-content {
+  margin: 40px auto;
+  color: white;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.head-page-h1 {
+  margin-bottom: 12px;
+  text-align: left;
+  font-size: 64px;
+}
+
+@media screen and (max-width: 992px) {
+  .nav-list {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
+.hero-page {
+  background-image: url("https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+}
+.head-page::after {
+  background: #051513;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  transition: all 0.25s ease;
+  width: 100%;
+}
