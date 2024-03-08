@@ -6,38 +6,27 @@ body {
   height: 3000px;
 }
 header {
-  background-color: black;
   padding: 10px 72px;
-  position: sticky;
-  z-index: 1;
+  position: relative;
+  z-index: 2;
   top: 0;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
 }
-.logo {
+.logo-img {
   width: 180px;
+  position: relative;
+  display: flex;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 .nav {
   position: relative;
   align-items: center;
   display: flex;
-}
-.logo a {
-  font-size: 16px;
-  display: flex;
-  color: #ffffff;
-  align-items: center;
-  padding: 0 10px;
-  height: 80px;
-}
-.logo-img {
-  height: 50px;
-  width: 50px;
-}
-a {
-  text-decoration: none;
-  color: inherit;
 }
 .nav-list {
   display: flex;
@@ -83,6 +72,11 @@ a {
   transition: all 0.25s ease;
   color: white;
 }
+.nav-list li:last-child a:focus {
+  background-color: rgb(207, 11, 11);
+  transition: all 0.25s ease;
+  color: white;
+}
 .nav-list li a:hover {
   color: rgb(255, 238, 207);
   transition: all 0.25s ease-in;
@@ -99,25 +93,6 @@ a {
   vertical-align: -0.125em;
   cursor: pointer;
 }
-.head-page-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 80px;
-}
-.head-page-box-content {
-  margin: 40px auto;
-  color: white;
-  position: relative;
-  z-index: 1;
-  box-sizing: border-box;
-}
-.head-page-h1 {
-  margin-bottom: 12px;
-  text-align: left;
-  font-size: 64px;
-}
-
 @media screen and (max-width: 992px) {
   .nav-list {
     display: none;
@@ -128,13 +103,12 @@ a {
 }
 .hero-page {
   background-image: url("https://images.pexels.com/photos/1089438/pexels-photo-1089438.jpeg");
-
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   background-attachment: fixed;
 }
-.head-page::after {
+.hero-page::after {
   background: #051513;
   content: "";
   height: 100%;
@@ -144,4 +118,41 @@ a {
   top: 0;
   transition: all 0.25s ease;
   width: 100%;
+}
+.hero-page-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 80px;
+  margin: 40px auto;
+  color: white;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.hero-page h1 {
+  position: relative;
+  display: block;
+  flex-direction: column;
+  color: #ffffff;
+  margin: 0;
+  padding: 20%;
+  justify-content: center;
+  font-size: 64px;
+  z-index: 1;
+}
+.hero-page a {
+  position: relative;
+  background-color: #006137;
+  border-radius: 3px;
+  line-height: 24px;
+  padding: 4px 20px;
+  left: px;
+  top: 400px;
+  z-index: 1;
+}
+.hero-a:hover {
+  background-color: rgb(2, 69, 37);
+  transition: all 0.25s ease;
+  color: white;
 }
